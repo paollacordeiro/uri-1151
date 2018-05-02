@@ -1,32 +1,48 @@
-# Prerequisites
-*.d
+#include <iostream>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+using namespace std;
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+int main ()
+{
+  int N, penultimo, ultimo, i, soma;
+  
+  penultimo = 0;
+  ultimo = 1;
+  i = 1;
+  
+  cin >> N;
+  
+  if (N == 0)
+  {
+  }
+  
+  else if (N == 1)
+  {
+    cout << penultimo;
+  }
+  
+  else
+  {
+    cout << penultimo << " " << ultimo;
+  
+  
+  while (i <= (N - 2))
+  {
+    
+    soma = penultimo + ultimo;
+  
+   
+    cout << " " << soma;
+  
+    
+    penultimo = ultimo;
+    ultimo = soma;
+    soma = 0;
+    
+    i++;
+  }
+    
+  }
+  
+  return 0;
+}
